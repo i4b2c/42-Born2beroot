@@ -1,4 +1,5 @@
 #!/bin/bash
+while true; do
 arch=$(uname -a)
 CPU=$(grep -c "physical id" /proc/cpuinfo)
 VCPU=$(grep -c "processor" /proc/cpuinfo)
@@ -30,3 +31,5 @@ wall "  #Architecture: $arch
         #Network: $IP ($IP_MAC)
         #Sudo : $Sudo cmd
         "
+       sleep 600
+done
